@@ -145,7 +145,6 @@ nav ul li>a{
 .input-textbox input {
     padding: 0.5rem 0.5rem 0.5rem 5rem;
     border-radius: 5px;
-    /* border: 2px solid navy; */
     margin-bottom: 1rem;
 }
 
@@ -207,7 +206,6 @@ nav ul li>a{
     padding: 2rem 1rem 0 0;
     font: normal 500 18px/35px var(--yekan);
     word-spacing: 3px;
-    /* line-height: 1.7rem; */
 }
 
 /* section 5 - CALL */
@@ -266,8 +264,8 @@ nav ul li>a{
 }
 
 /* FOOTER */
+
 .footer-area {
-    
     margin-top: 4rem;
     background-color: rgb(58, 68, 85);
 
