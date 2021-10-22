@@ -27,14 +27,15 @@
 .btn {
     color: white;
     background-color: rgb(76, 65, 180);
-    padding: 0.5rem 5rem;
-    border: none;
-    ;
+    padding: 0.6rem 5rem;
+    /* border: none; */
+    font: normal 500 17px var(--yekan);
+
 }
 
 .btn:hover {
+    border: 1px solid rgb(17, 48, 73);
     background-color: white;
-    border: var(--primary-color);
     color: var(--primary-color);
 }
 
@@ -44,7 +45,7 @@
 /* header navbar */
 
 .header_area {
-    font: normal 600 17px/30px var(--yekan);
+    /* font: normal 600 17px/30px var(--yekan); */
     background-color: rgb(228, 238, 255);
     padding: 0.5rem;
 }
@@ -54,26 +55,125 @@
 .haeder-container {
     top: 0;
     left: 0;
-    background-color: rgb(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, 0.63);
 }
+
+.haeder-container a{
+    text-decoration: none;
+    color: white;
+}
+
+
+nav ul li{
+    display: inline-block; 
+    position: relative;
+}
+
+nav ul li>a{
+    display: inline-block; 
+    color: #fff; 
+    padding: 5px 15px 6px 8px;
+}
+
+#main-menu {
+    margin: 0.5rem 0.5rem;
+    display: hidden; 
+    width: 64px;
+    height: 64px;
+    background: url("../images/navabrIcon.png");
+}
+
+
+@media only screen and (max-width : 1024px) {
+    #main-menu { 
+        display:inline-block;
+    }
+
+    #top-menu {
+        position: relative; 
+        z-index: 100000; 
+        /* padding-top: 9px; */
+    }
+
+    nav ul {
+        display: none; 
+        position: absolute;
+        padding: 5px; 
+        z-index: 100000; 
+        background-color: rgb(158, 208, 255);
+        right: 0px; 
+        top: 0; 
+        width: 100%; 
+        border-radius: 4px 0 4px 4px;
+    }
+
+    nav li { 
+        text-align: right; 
+        width: 120px; 
+        padding: 10px;
+        margin: 0;}
+
+    nav:hover ul , nav:active ul { 
+        display: block;
+    }
+    }
 
 /* section 1 - SUBSCRIE */
 
-.sub_area {
+.sub_area .container{
+    align-items: center;
+    justify-content: center;
+    margin-top: 15rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
 
+.sub_area {
+    font: normal 500 17px var(--yekan);
+    color: white;
     padding: 1rem;
     text-align: center;
+}
+
+.sub_area p{
+    font: normal 500 20px var(--yekan);
+    
 }
 
 .input-textbox input {
     padding: 0.5rem 0.5rem 0.5rem 5rem;
     border-radius: 5px;
-    border: 2px solid navy;
+    /* border: 2px solid navy; */
     margin-bottom: 1rem;
 }
 
-
-
+.typewriter h1{
+    color: #fff;
+    width: 200px;
+    overflow: hidden; 
+    border-left: .15em solid rgb(9, 15, 104); 
+    white-space: nowrap;
+    margin: 2rem auto; 
+    font: normal 600 60px var(--yekan);
+    animation:
+      typing 3.5s steps(30, end),
+      blink-caret .7s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 200px }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    
+    from, to { border-color: transparent }
+    60% { border-color: rgb(134, 185, 226) }
+  }
 
 /* section 2 - ABOUT US */
 
@@ -129,14 +229,14 @@
     position: relative;
     height: 100%;
     padding: 3rem 0;
+    background: linear-gradient(90deg,#343e7c5e 0%,#7bd5f075 100%) ;
     /* width: 100%; */
     /* padding: 1rem; */
-    background-image: url("../images/bg-Img.jpg");
-    background-size: cover;
-}
+    /* background-image: url("../images/bg-Img.jpg");
+    background-size: cover;*/
+} 
 
-.call::before {
-    /* z-index: -1; */
+/* .call::before {
     content: "";
     position: absolute;
     top: 0px;
@@ -144,13 +244,16 @@
     bottom: 0px;
     left: 0px;
     background-color: rgba(51, 48, 48, 0.726);
-}
+} */
 
 .call-content {
     position: relative;
-    color: #ffffff;
+    color: #22279e;
     font-weight: bold;
 
+}
+.call_area input{
+    border: none;
 }
 
 .call_area label {
@@ -158,9 +261,14 @@
     margin-bottom: 0.5rem;
 }
 
+.call-now{
+    margin: 0 auto;
+}
+
 /* FOOTER */
-.footer_area {
+.footer-area {
+    
     margin-top: 4rem;
-    background-color: rgb(228, 238, 255);
+    background-color: rgb(58, 68, 85);
 
 }
